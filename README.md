@@ -49,13 +49,13 @@ The dataset is sourced from Roboflow, containing labeled images of beverage cont
 
 To download the dataset, we used the following Roboflow API integration:
 
-'''python
+```python
 from roboflow import Roboflow
 rf = Roboflow(api_key="YOUR_API_KEY")
 project = rf.workspace("roboflow-universe-projects").project("beverage-containers-3atxb")
 version = project.version(3)
 dataset = version.download("yolov11")
-'''
+```
 
 
 
