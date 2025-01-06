@@ -9,19 +9,19 @@ applications.
 
 ## Table of Contents
 
-1. [Project Overview]()
+1. [Project Overview](https://github.com/elnemr19/Beverage-Container-Detection-Using-YOLO/tree/main?tab=readme-ov-file#project-overview)
 
-2. [Dataset]()
+2. [Dataset](https://github.com/elnemr19/Beverage-Container-Detection-Using-YOLO/tree/main?tab=readme-ov-file#dataset)
 
-3. [Setup and Installation]()
+3. [Setup and Installation](https://github.com/elnemr19/Beverage-Container-Detection-Using-YOLO/tree/main?tab=readme-ov-file#setup-and-installation)
 
-4. [Model Training]()
+4. [Model Training](https://github.com/elnemr19/Beverage-Container-Detection-Using-YOLO/tree/main?tab=readme-ov-file#model-training)
 
-5. [Validation]()
+5. [Validation](https://github.com/elnemr19/Beverage-Container-Detection-Using-YOLO/tree/main?tab=readme-ov-file#validation)
 
-6. [Prediction]()
+6. [Prediction](https://github.com/elnemr19/Beverage-Container-Detection-Using-YOLO/tree/main?tab=readme-ov-file#prediction)
 
-7. [Results]()
+7. [Results](https://github.com/elnemr19/Beverage-Container-Detection-Using-YOLO/tree/main?tab=readme-ov-file#results)
 
 
 
@@ -122,7 +122,7 @@ Use the trained model to detect beverage containers in new images:
 
 * **Confidence Threshold:** 0.3
 
-* **Source*: Test images from the dataset.
+* **Source**: Test images from the dataset.
 
 The output will include:
 
@@ -131,6 +131,18 @@ The output will include:
 * Class labels and confidence scores.
 
 * Annotated images saved in the designated output directory.
+
+## Evaluation
+
+**Confusion Matrix**
+
+![conv](https://github.com/user-attachments/assets/98c0a5bb-1151-43da-8f14-946783b4cb99)
+
+
+
+![image](https://github.com/user-attachments/assets/0702b24e-eb38-4a3e-b6f3-b6a213d09a3b)
+
+
 
 
 ## Results
