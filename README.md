@@ -35,7 +35,7 @@ the project achieves high accuracy in detecting various types of containers.
 
 ## Dataset
 
-The dataset is sourced from Roboflow, containing labeled images of beverage containers. The dataset includes training, validation, and test sets for optimal model performance.
+The dataset is sourced from [Roboflow](https://universe.roboflow.com/30201220/beverage-containers-3atxb-vqovx-1ubgt/dataset/1/download), containing labeled images of beverage containers. The dataset includes training, validation, and test sets for optimal model performance.
 
 **Key Details:**
 
@@ -154,4 +154,5 @@ The trained YOLOv11 model achieves high accuracy in detecting beverage container
 
 
 
+## Kaggle Link: [Kaggle](https://www.kaggle.com/code/abdullahalnemr/beverage-containers-yolo#Evaluation)
 
