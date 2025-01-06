@@ -23,7 +23,6 @@ applications.
 
 7. [Results]()
 
-8. [References]()
 
 
 ## Project Overview
@@ -62,14 +61,84 @@ dataset = version.download("yolov11")
 ## Setup and Installation
 
 1. Install the necessary dependencies:
-
-pip install roboflow ultralytics
-
+```python
+  pip install roboflow ultralytics
+```
 2. Integrate the dataset using the Roboflow API and download the YOLOv11 configuration file.
 
 3. Ensure the YOLOv11 environment is ready:
+ ```python
+  yolo check
+ ```
 
 
+
+## Model Training
+
+To train the YOLOv11 model, execute the following command:
+
+```python
+!yolo task=detect mode=train model=yolo11s.pt data={dataset.location}/data.yaml epochs=50 imgsz=640 plots=True
+```
+
+**Training Parameters**:
+
+* **Model:** YOLOv11 small (yolo11s.pt)
+
+* **Epochs:** 50
+
+* **Image Size:** 640x640
+
+* **Plots:** Enabled for visualization of training progress.
+
+
+
+
+## Validation
+
+After training, validate the model to evaluate its performance:
+
+```python
+!yolo task=detect mode=val model=/{HOME}/runs/detect/train/weights/best.pt data={dataset.location}/data.yaml
+```
+
+**Validation Metrics**:
+
+* **mAP (mean Average Precision)**: Indicates detection accuracy.
+
+* **Precision and Recall**: Evaluate the balance between true positives and false negatives.
+
+
+
+## Prediction
+
+Use the trained model to detect beverage containers in new images:
+
+```python
+!yolo task=detect mode=predict model=/{HOME}/runs/detect/train/weights/best.pt conf=0.3 source={dataset.location}/test/images
+```
+
+**Parameters**:
+
+* **Confidence Threshold:** 0.3
+
+* **Source*: Test images from the dataset.
+
+The output will include:
+
+* Bounding boxes around detected objects.
+
+* Class labels and confidence scores.
+
+* Annotated images saved in the designated output directory.
+
+
+## Results
+
+The trained YOLOv11 model achieves high accuracy in detecting beverage containers. Below are sample detections from the test set:
+
+
+![image](https://github.com/user-attachments/assets/04bc1ae2-0026-4511-99bf-1a7fb9f502e4)
 
 
 
